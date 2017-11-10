@@ -67,7 +67,7 @@ function menuHightlight() {
 
             for (var i = 0; i < aArray.length; i++) {
                 var theID = aArray[i];
-                var div = $(theID).offset();
+                /*var div = $(theID).offset();*/
                 if (typeof div === 'undefined') {
                     continue;
                 }
