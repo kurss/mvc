@@ -1,0 +1,27 @@
+body {
+    padding-top: 40px;
+    background-color: #eee;
+}
+.myInput {
+    width:60%;
+    text-align:center;
+    margin: 0 auto;
+}
+.myTable {
+    width: 900px;
+    padding: 15px;
+    margin: 0 auto;
+} 
+.myForm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+.myText::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+.myText::selection {
+    color: red;
+    background: yellow;
+}

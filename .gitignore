@@ -1,0 +1,8 @@
+admin/settings/
+admin/uploads/
+admin/zebra-images/
+vendor/
+idea/
+trash/
+*.log
+*.tmp

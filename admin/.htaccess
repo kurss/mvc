@@ -1,0 +1,9 @@
+<files .htaccess>
+    order allow,deny
+    deny from all
+</files>
+
+<files security.php>
+    order allow,deny
+    deny from all
+</files>

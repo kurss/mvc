@@ -1,0 +1,7 @@
+{
+    "name": "Kurss",
+    "require": {
+        "php":">=5.0.0",
+        "stefangabos/zebra_image":"^2.2"
+    }
+}
