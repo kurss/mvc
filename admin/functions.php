@@ -24,6 +24,7 @@ function delete () {
 
 function create () {
     global $target_dir;
+	global $target_dir_zebra_images;
     
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
@@ -86,6 +87,18 @@ function create () {
             }
         
         if (mysqli_query($conn, $sql)) {
+		
+		//Библиотека stefangabos/zebra_image из Packagist для обрезки изображений    
+		$image = new Zebra_Image();
+		$image->auto_handle_exif_orientation = false;
+		$image->source_path = 'admin/'.$target_dir.$row["url"];
+		$image->target_path = 'admin/'.$target_dir_zebra_images.$row["url"];
+		$image->jpeg_quality = 100;
+		$image->preserve_aspect_ratio = true;
+		$image->enlarge_smaller_images = true;
+		$image->preserve_time = true;
+		$image->handle_exif_orientation_tag = true;
+		$image->resize(100, 100, ZEBRA_IMAGE_CROP_CENTER);
            
         echo '<h2 class=" text-center"><span class="glyphicon glyphicon-thumbs-up"></span></h2>';
         } else {
